@@ -1,3 +1,19 @@
+/*Aufgabe 2.1: Satellitenzeit
+Schwerpunkte: Variablen und Bezeichner
+Aufgabe: Ein Satellit funkt Zeitspannen als "Anzahl Sekunden" zur Erde. Schreiben Sie ein Programm
+Satellitenzeit, das einen ganzzahligen Sekundenbetrag in eine Zeitspanne in der Form
+<d> Tage <h>:<m>:<s>
+umrechnet und ausgibt, wobei gilt:
+<d> = Anzahl Tage,
+<h> = Anzahl Stunden im Bereich 0 bis 23,
+<m> = Anzahl Minuten im Bereich 0 bis 59,
+<s> = Anzahl Sekunden im Bereich 0 bis 59.
+Testen Sie das Programm beispielsweise mit dem Eingabewert 10000. Die korrekte Ausgabe ist
+0 Tage 2:46:40,
+denn 0 Tage + 2 Stunden + 46 Minuten + 40 Sekunden = (0 · 86400 + 2 · 3600 + 46 · 60 + 40) Sekunden =
+10000 Sekunden*/
+
+
 package AB2_1;
 
 public class Satellitenzeit {
