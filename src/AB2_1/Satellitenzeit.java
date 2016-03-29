@@ -27,16 +27,13 @@ package AB2_1;
 public class Satellitenzeit {
 	public static void main(String[] args) {
 		int tage, stunden, minuten, sekunden;
-		final int satellitenzeit;
-
+		
+		final int satellitenzeit = 10000;
 		final int SEKUNDEN_PRO_MINUTE = 60;
 		final int SEKUNDEN_PRO_STUNDE = 3600;
 		final int SEKUNDEN_PRO_TAG = 86400;
 		final int MINUTEN_PRO_STUNDE = 60;
 		final int STUNDEN_PRO_TAG = 24;
-
-		// Die gegebene Satellitenzeit
-		satellitenzeit = 10000;
 
 		// zuerst schauen wir, wie viele Sekunden übrig bleiben
 		sekunden = satellitenzeit % SEKUNDEN_PRO_MINUTE;
