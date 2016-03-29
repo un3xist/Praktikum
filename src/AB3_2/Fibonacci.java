@@ -1,7 +1,7 @@
 /**
  * Praktikum TIPTP1, SS 2016
  * Gruppe: Manuel Scholz (manuel.scholz@haw-hamburg.de),
- * Danny SoUndSo (mia.meister@haw-hamburg.de)
+ * Danny Luda (danny-marcel.luda@haw-hamburg.de)
  * Aufgabe: Aufgabenblatt 3, Aufgabe 2
  */
 
@@ -65,10 +65,13 @@ public class Fibonacci {
       fibonaccifolge[j] = fibonaccifolge[j - 1] + fibonaccifolge[j - 2];
       j++;
     }
-    /*
-     * // Berechnung mittels der Formel von Moivre/Binet //fn =
-     * (phi^n-psi^n)/(phi-psi) mit phi = (1+sqrt(5))/2 und psi = 1-phi double
-     * phi = (1 + Math.sqrt(5) )/2; double psi = 1-phi; double fibonacci =
+    /**
+     * Berechnung mittels der Formel von Moivre/Binet 
+     * fn =(phi^n-psi^n)/(phi-psi) 
+     * mit 
+     * phi = (1+sqrt(5))/2 und psi = 1-phi double
+     * phi = (1 + Math.sqrt(5) )/2; 
+     * double psi = 1-phi; double fibonacci =
      * (Math.pow(phi, fibonaccizahlen) - Math.pow(psi, fibonaccizahlen) ) / (
      * phi - psi); System.out.println( fibonacci);
      */

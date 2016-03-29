@@ -1,7 +1,7 @@
 /**
  * Praktikum TIPTP1, SS 2016
  * Gruppe: Manuel Scholz (manuel.scholz@haw-hamburg.de),
- * Danny SoUndSo (mia.meister@haw-hamburg.de)
+ * Danny Luda (danny-marcel.luda@haw-hamburg.de)
  * Aufgabe: Aufgabenblatt 2, Aufgabe 1
  */
 
@@ -26,8 +26,9 @@ package AB2_1;
 
 public class Satellitenzeit {
   public static void main(String[] args) {
-    int satellitenzeit, tage, stunden, minuten, sekunden;
-
+    int tage, stunden, minuten, sekunden;
+    final int satellitenzeit;
+    
     // Die gegebene Satellitenzeit
     satellitenzeit = 10000;
 

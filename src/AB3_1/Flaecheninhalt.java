@@ -1,7 +1,7 @@
 /**
  * Praktikum TIPTP1, SS 2016
  * Gruppe: Manuel Scholz (manuel.scholz@haw-hamburg.de),
- * Danny SoUndSo (mia.meister@haw-hamburg.de)
+ * Danny Luda (danny-marcel.luda@haw-hamburg.de)
  * Aufgabe: Aufgabenblatt 3, Aufgabe 1
  */
 
@@ -38,20 +38,20 @@ public class Flaecheninhalt {
 
     scanner.close();
 
-    // switch(index){
-    // case 1:
-    // flaecheninhalt = radius*radius*Math.PI;
-    // break;
-    // case 2:
-    // flaecheninhalt = radius*radius;
-    // break;
-    // case 3:
-    // flaecheninhalt = (radius*radius*Math.sqrt(3))/4;
-    // break;
-    // default:
-    // flaecheninhalt = -1;
-    // break;
-    // }
+     /*switch(index){
+     case 1:
+     flaecheninhalt = radius*radius*Math.PI;
+     break;
+     case 2:
+     flaecheninhalt = radius*radius;
+     break;
+     case 3:
+     flaecheninhalt = (radius*radius*Math.sqrt(3))/4;
+     break;
+     default:
+     flaecheninhalt = -1;
+     break;
+     }*/
 
     if (index == 1) {
       flaecheninhalt = radius * radius * Math.PI;

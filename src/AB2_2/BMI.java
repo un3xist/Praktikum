@@ -1,7 +1,7 @@
 /**
  * Praktikum TIPTP1, SS 2016
  * Gruppe: Manuel Scholz (manuel.scholz@haw-hamburg.de),
- * Danny SoUndSo (mia.meister@haw-hamburg.de)
+ * Danny Luda (danny-marcel.luda@haw-hamburg.de)
  * Aufgabe: Aufgabenblatt 2, Aufgabe 2
  */
 
