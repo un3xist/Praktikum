@@ -25,31 +25,39 @@
 package AB2_1;
 
 public class Satellitenzeit {
-  public static void main(String[] args) {
-    int tage, stunden, minuten, sekunden;
-    final int satellitenzeit;
-    
-    // Die gegebene Satellitenzeit
-    satellitenzeit = 10000;
+	public static void main(String[] args) {
+		int tage, stunden, minuten, sekunden;
+		final int satellitenzeit;
 
-    // zuerst schauen wir, wie viele Sekunden übrig bleiben
-    sekunden = satellitenzeit % 60;
+		final int SEKUNDEN_PRO_MINUTE = 60;
+		final int SEKUNDEN_PRO_STUNDE = 3600;
+		final int SEKUNDEN_PRO_TAG = 86400;
+		final int MINUTEN_PRO_STUNDE = 60;
+		final int STUNDEN_PRO_TAG = 24;
 
-    // Das ziehen wir von der Sekundenzeit ab, machen es zu Stunden, und schauen
-    // wie viele Minuten übrig bleiben
-    minuten = ((satellitenzeit - sekunden) / 60) % 60;
+		// Die gegebene Satellitenzeit
+		satellitenzeit = 10000;
 
-    // Die übrigen Sekunden und Minuten werden wieder abgezogen und in Stunden
-    // umgerechnet.
-    // Dannach wie viele Stunden von den Tagen übrig bleiben.
-    stunden = ((satellitenzeit - sekunden - 60 * minuten) / 3600) % 24;
+		// zuerst schauen wir, wie viele Sekunden übrig bleiben
+		sekunden = satellitenzeit % SEKUNDEN_PRO_MINUTE;
 
-    // Nun muss lediglich noch die volle Zahl an Tagen herrausgezogen werden.
-    tage = ((satellitenzeit - sekunden - 60 * minuten - 3600 * stunden) / 86400)
-        % 3600;
+		// Das ziehen wir von der Sekundenzeit ab, machen es zu Stunden, und
+		// schauen
+		// wie viele Minuten übrig bleiben
+		minuten = ((satellitenzeit - sekunden) / SEKUNDEN_PRO_MINUTE) % MINUTEN_PRO_STUNDE;
 
-    // Die Ausgabe ist eine einfache addition von Strings.
-    System.out.println(tage + " Tage," + stunden + " Stunden," + minuten
-        + " Minuten," + sekunden + " Sekunden");
-  }
+		// Die übrigen Sekunden und Minuten werden wieder abgezogen und in
+		// Stunden
+		// umgerechnet.
+		// Dannach wie viele Stunden von den Tagen übrig bleiben.
+		stunden = ((satellitenzeit - sekunden - SEKUNDEN_PRO_MINUTE * minuten) / SEKUNDEN_PRO_STUNDE) % STUNDEN_PRO_TAG;
+
+		// Nun muss lediglich noch die volle Zahl an Tagen herrausgezogen
+		// werden.
+		tage = ((satellitenzeit - sekunden - SEKUNDEN_PRO_MINUTE * minuten - SEKUNDEN_PRO_STUNDE * stunden)
+				/ SEKUNDEN_PRO_TAG) % SEKUNDEN_PRO_STUNDE;
+
+		// Die Ausgabe ist eine einfache addition von Strings.
+		System.out.println(tage + " Tage," + stunden + " Stunden," + minuten + " Minuten," + sekunden + " Sekunden");
+	}
 }
