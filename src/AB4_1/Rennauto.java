@@ -44,8 +44,13 @@ public class Rennauto {
 	
 	public static void main(String[] args) {
 
+		//Hier erstellen wir ein neues Objekt der Klasse Rennauto
 		Rennauto rennwagen = new Rennauto("Paul", "Ferrari", 200);
+		
+		//lassen dieses einmal fahren
 		rennwagen.fahren();
+		
+		//und geben die Werte aus
 		rennwagen.ausgeben();
 		
 	}
@@ -55,7 +60,8 @@ public class Rennauto {
 	 */
 	public void fahren()
 	{
-		this.gefahreneStrecke = Math.random() * this.maximalgeschwindigkeit;
+		//Die gefahrene Strecke wird um die Maximalgeschwindigkeit mal den Zufall multipliziert.
+		this.gefahreneStrecke += Math.random() * this.maximalgeschwindigkeit;
 	}
 	
 	/**
