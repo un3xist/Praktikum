@@ -28,8 +28,38 @@ package AB4_1;
 
 public class Rennauto {
 
+	//Eigenschaften des Objektes Rennauto
+	String fahrername, fahrzeugtyp;
+	double maximalgeschwindigkeit, gefahreneStrecke;
+	
+	//Konstruktor
+	public Rennauto(String fahrername, String fahrzeugtyp, double maximalgeschwindigkeit)
+	{
+		//Hier werden die Parameter auf die Eigenschaften des Objektes geschrieben
+		this.fahrername = fahrername;
+		this.fahrzeugtyp = fahrzeugtyp;
+		this.maximalgeschwindigkeit = maximalgeschwindigkeit;
+	}
+	
 	public static void main(String[] args) {
 
 	}
-
+	
+	/**
+	 * Beim Aufruf der Funktion bewegt sich das Auto mit Maximalgeschwindigkeit mal einen Zufallsfaktor.
+	 */
+	public void fahren()
+	{
+		
+	}
+	
+	/**
+	 * Beim Aufruf der Funktion wird der aktuelle Zustand des Objektes ausgegeben.
+	 */
+	public void ausgeben()
+	{
+		
+	}
+	
+	
 }
