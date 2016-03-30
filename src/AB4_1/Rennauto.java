@@ -47,12 +47,12 @@ public class Rennauto {
 		//Hier erstellen wir ein neues Objekt der Klasse Rennauto
 		Rennauto rennwagen = new Rennauto("Paul", "Ferrari", 200);
 		
-		//lassen dieses einmal fahren
+		//lassen dieses einmal fahren und geben die Werte aus
+		for (int i = 0; i < 5 ; i++)
+		{
 		rennwagen.fahren();
-		
-		//und geben die Werte aus
 		rennwagen.ausgeben();
-		
+		}	
 	}
 	
 	/**
