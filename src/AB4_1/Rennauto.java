@@ -39,10 +39,15 @@ public class Rennauto {
 		this.fahrername = fahrername;
 		this.fahrzeugtyp = fahrzeugtyp;
 		this.maximalgeschwindigkeit = maximalgeschwindigkeit;
+		this.gefahreneStrecke = 0;
 	}
 	
 	public static void main(String[] args) {
 
+		Rennauto rennwagen = new Rennauto("Paul", "Ferrari", 200);
+		rennwagen.fahren();
+		rennwagen.ausgeben();
+		
 	}
 	
 	/**
@@ -50,7 +55,7 @@ public class Rennauto {
 	 */
 	public void fahren()
 	{
-		
+		this.gefahreneStrecke = Math.random() * this.maximalgeschwindigkeit;
 	}
 	
 	/**
@@ -58,7 +63,10 @@ public class Rennauto {
 	 */
 	public void ausgeben()
 	{
-		
+		System.out.println("Fahrername: " + this.fahrername + "\n"
+				+ "Fahrzeugtyp: " + this.fahrzeugtyp + "\n" 
+				+ "Maximalgeschwindigkeit: " + this.maximalgeschwindigkeit + "\n"
+				+ "Gefahrene Strecke seit start: " + this.gefahreneStrecke + "\n");
 	}
 	
 	
