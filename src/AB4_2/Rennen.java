@@ -39,6 +39,40 @@ public class Rennen {
 	// Konstruktor
 	public Rennen() {
 		this.autoliste = new Rennauto[1];
+		anzahlRennautos = 0;
+		Streckenlaenge = 2000;
+
+	}
+
+	public static void main(String[] args) {
+		// zum testen fuegen wir 9 Rennautos hinzu
+
+		Rennauto auto1, auto2, auto3, auto4, auto5, auto6, auto7, auto8, auto9;
+
+		auto1 = new Rennauto("Peter", "Ferrari", 200);
+		auto2 = new Rennauto("Klaus", "Opel", 120);
+		auto3 = new Rennauto("Chantalle", "Fiat", 80);
+		auto4 = new Rennauto("Leo", "BMW", 160);
+		auto5 = new Rennauto("Phil", "Mercedes", 140);
+		auto6 = new Rennauto("Manuel", "Jaguar", 220);
+		auto7 = new Rennauto("Johannes", "Jeep", 90);
+		auto8 = new Rennauto("Alisa", "Landrover", 100);
+		auto9 = new Rennauto("Kevin", "Heißluftballon", 60);
+
+		// Alle autos zum array hinzufuegen
+		Rennen autorennen = new Rennen();
+		autorennen.addRennauto(auto1);
+		autorennen.addRennauto(auto2);
+		autorennen.addRennauto(auto3);
+		autorennen.addRennauto(auto4);
+		autorennen.addRennauto(auto5);
+		autorennen.addRennauto(auto6);
+		autorennen.addRennauto(auto7);
+		autorennen.addRennauto(auto8);
+		autorennen.addRennauto(auto9);
+
+		// Nun lediglich noch das rennen starten
+		autorennen.durchfueren();
 
 	}
 
@@ -46,40 +80,34 @@ public class Rennen {
 	// Ist das Array voll, soll die größe des arrays verdoppelt werden.
 	public void addRennauto(Rennauto auto) {
 
-		// Zuerst den ersten freien Platz finden. Wenn ein freier Platz gefunden
-		// wurde, wird die Schleife abgebrochen. Wenn kein freier Platz da ist,
-		// wird nach der Schleife geprueft, ob der letzte Platz auch belegt ist.
-		int i = 0;
-		for (i = 0; i < this.autoliste.length; i++) {
-			if (this.autoliste[i] == null) {
-				break;
-			}
-		}
+		// Zuerst vergleichen wir die groesse des Arrays mit den bereits
+		// eingetragenen Rennautos. Wenn platz fuer weitere Autos ist, muss das
+		// Array nicht vergroessert werden
 
-		// Sollte im Array kein Platz mehr sein, so wird dieses neu mit
-		// doppelter groesse angelegt.
-		if (this.autoliste[i] != null) {
-
-			// Temporaeres Array fuer die Autos anlegen
+		if (this.autoliste.length == this.anzahlRennautos) {
+			// Autoliste zwischenspeichern
 			Rennauto[] temp = new Rennauto[this.autoliste.length];
+			temp = autoliste;
 
-			// Array loeschen
+			// Autoliste loeschen
 			this.autoliste = null;
 
-			// Array doppel so gross neu anlegen
+			// Autoliste neu anlegen
 			this.autoliste = new Rennauto[temp.length * 2];
 
-			// Rennautos uebertragen
-			for (int j = 0; j < temp.length; j++) {
-				this.autoliste[j] = temp[j];
-			}
+			// Autoliste wieder fuellen
 
-			// temp wieder loeschen; notwendig?
-			temp = null;
+			for (int i = 0; i < temp.length; i++) {
+				autoliste[i] = temp[i];
+			}
 		}
 
-		// jetzt sollte i+1 ein freier Platz im array sein
-		this.autoliste[i + 1] = auto;
+		// Praktischerweise ist die Anzahl Rennautos gleich ein freier Platz im
+		// Array
+		this.autoliste[anzahlRennautos] = auto;
+
+		// Zum schluss muessen wir nurnoch die Anzahl Rennautos erhoehen
+		this.anzahlRennautos++;
 
 	}
 
@@ -97,25 +125,27 @@ public class Rennen {
 		// sind
 		int autosImZiel = 0;
 
-		for (int i = 0; i < this.autoliste.length; i++) {
-			if (this.autoliste[i].gefahreneStreckeAusgeben() <= this.Streckenlaenge) {
+		for (int i = 0; i < this.anzahlRennautos; i++) {
+			if (this.autoliste[i].gefahreneStreckeAusgeben() >= this.Streckenlaenge) {
 				autosImZiel++;
 			}
 		}
 
 		// Bei einem Sieger wird der Sieger zueruck gegeben
 		if (autosImZiel == 1) {
-			for (int i = 0; i < this.autoliste.length; i++) {
-				if (this.autoliste[i].gefahreneStreckeAusgeben() <= this.Streckenlaenge) {
+			for (int i = 0; i < this.anzahlRennautos; i++) {
+				if(this.autoliste[i].gefahreneStreckeAusgeben() >= this.Streckenlaenge)
+				{
+					this.autoliste[i].ausgeben();
 					return this.autoliste[i];
 				}
 			}
 		}
 		// Bei mehreren Siegern wird ein beliebiger zuruck gegeben
 		else if (autosImZiel > 1) {
-
-			for (int i = 0; i < this.autoliste.length; i++) {
+			for (int i = 0; i < this.anzahlRennautos; i++) {
 				if (this.autoliste[i].gefahreneStreckeAusgeben() <= this.Streckenlaenge) {
+					this.autoliste[i].ausgeben();
 					return this.autoliste[i];
 				}
 			}
@@ -135,7 +165,7 @@ public class Rennen {
 		// ob das erste Objekt im Array nicht null ist
 		if (this.autoliste[1] != null) {
 
-			for (int i = 0; i < this.autoliste.length; i++) {
+			for (int i = 0; i < this.anzahlRennautos; i++) {
 				this.autoliste[i].fahren();
 			}
 
@@ -149,8 +179,9 @@ public class Rennen {
 	public void durchfueren() {
 		// Das ganze soll nur funktionieren, wenn es ueberhaupt Autos im Array
 		// gibt
+
 		if (this.autoliste[0] != null) {
-			while (ermittleSieger() != null) {
+			while (ermittleSieger() == null) {
 				schritt();
 			}
 		}
