@@ -144,7 +144,7 @@ public class Rennen {
 		// Bei mehreren Siegern wird ein beliebiger zuruck gegeben
 		else if (autosImZiel > 1) {
 			for (int i = 0; i < this.anzahlRennautos; i++) {
-				if (this.autoliste[i].gefahreneStreckeAusgeben() <= this.Streckenlaenge) {
+				if (this.autoliste[i].gefahreneStreckeAusgeben() >= this.Streckenlaenge) {
 					this.autoliste[i].ausgeben();
 					return this.autoliste[i];
 				}
