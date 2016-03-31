@@ -73,5 +73,9 @@ public class Rennauto {
 				+ "Maximalgeschwindigkeit: " + this.maximalgeschwindigkeit + "\n" + "Gefahrene Strecke seit start: "
 				+ this.gefahreneStrecke + "\n");
 	}
+	public double gefahreneStreckeAusgeben()
+	{
+		return this.gefahreneStrecke;
+	}
 
 }
