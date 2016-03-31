@@ -42,18 +42,6 @@ public class Rennauto {
 		this.gefahreneStrecke = 0;
 	}
 
-	public static void main(String[] args) {
-
-		// Hier erstellen wir ein neues Objekt der Klasse Rennauto
-		Rennauto rennwagen = new Rennauto("Paul", "Ferrari", 200);
-
-		// lassen dieses einmal fahren und geben die Werte aus
-		for (int i = 0; i < 5; i++) {
-			rennwagen.fahren();
-			rennwagen.ausgeben();
-		}
-	}
-
 	/**
 	 * Beim Aufruf der Funktion bewegt sich das Auto mit Maximalgeschwindigkeit
 	 * mal einen Zufallsfaktor.
@@ -73,6 +61,7 @@ public class Rennauto {
 				+ "Maximalgeschwindigkeit: " + this.maximalgeschwindigkeit + "\n" + "Gefahrene Strecke seit start: "
 				+ this.gefahreneStrecke + "\n");
 	}
+	
 	public double gefahreneStreckeAusgeben()
 	{
 		return this.gefahreneStrecke;
