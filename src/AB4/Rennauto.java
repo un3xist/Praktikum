@@ -24,7 +24,7 @@
  * Zustand des Objektes ausgeben.
  */
 
-package AB4_1;
+package AB4;
 
 public class Rennauto {
 
