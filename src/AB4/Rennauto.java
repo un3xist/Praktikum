@@ -62,9 +62,14 @@ public class Rennauto {
 				+ this.gefahreneStrecke + "\n");
 	}
 	
-	public double gefahreneStreckeAusgeben()
+	public double getGefahreneStrecke()
 	{
 		return this.gefahreneStrecke;
 	}
+	
+	public String getName()
+  {
+    return this.fahrername;
+  }
 
 }

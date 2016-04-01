@@ -19,25 +19,50 @@
  * gibt den Spieler und den Gewinn aus.
  */
 
+
 package AB4;
 
-public class Wettbuero {
+public class Wette {
   
-  int anzahlWetten;
-  double faktor;
-  
-  public Wettbuero(Rennen rennen, double gewinnfaktor)
+  String fahrerin;
+  int wettEinsatz;
+  String spieler;
+  /**
+   * @param fahrerin
+   * @param wettEinsatz
+   * @param spieler
+   * 
+   * Konstruktor
+   */
+  public Wette(String fahrerin, int wettEinsatz, String spieler)
   {
     
   }
-  public void wetteAnnehmen(String fahrerin, int wetteinsatz, String spieler)
+  /**
+   * 
+   * @return
+   */
+  public String getFahrerin()
   {
-    
+    return this.fahrerin;
   }
   
-  public void auswerten()
+  /**
+   * 
+   * @return
+   */
+  public int getWetteinsatz()
   {
-    
+    return this.wettEinsatz;
+  }
+  
+  /**
+   * 
+   * @return
+   */
+  public String getSpieler()
+  {
+    return this.spieler;
   }
 
 }

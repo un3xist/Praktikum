@@ -76,6 +76,11 @@ public class Rennen {
 
   // Es wird ein zusätzliches Objekt Rennauto dem Array autoliste hinzugefügt.
   // Ist das Array voll, soll die größe des arrays verdoppelt werden.
+  
+  /**
+   * 
+   * @param auto
+   */
   public void addRennauto(Rennauto auto) {
 
     // Zuerst vergleichen wir die groesse des Arrays mit den bereits
@@ -116,7 +121,7 @@ public class Rennen {
    * 
    * @return
    */
-  public Rennauto ermittleSieger() {
+  Rennauto ermittleSieger() {
 
     // Zum finden des Siegers gehen wir einfach alle Rennautos durch
     // zuerst checken wir aber, wie viele Autos schon ueber der Ziellinie
@@ -124,7 +129,7 @@ public class Rennen {
     int autosImZiel = 0;
 
     for (int i = 0; i < this.anzahlRennautos; i++) {
-      if (this.autoliste[i].gefahreneStreckeAusgeben() >= this.Streckenlaenge) {
+      if (this.autoliste[i].getGefahreneStrecke() >= this.Streckenlaenge) {
         autosImZiel++;
       }
     }
@@ -133,7 +138,7 @@ public class Rennen {
     if (autosImZiel == 1) {
       for (int i = 0; i < this.anzahlRennautos; i++) {
         if (this.autoliste[i]
-            .gefahreneStreckeAusgeben() >= this.Streckenlaenge) {
+            .getGefahreneStrecke() >= this.Streckenlaenge) {
           this.autoliste[i].ausgeben();
           return this.autoliste[i];
         }
@@ -143,7 +148,7 @@ public class Rennen {
     else if (autosImZiel > 1) {
       for (int i = 0; i < this.anzahlRennautos; i++) {
         if (this.autoliste[i]
-            .gefahreneStreckeAusgeben() >= this.Streckenlaenge) {
+            .getGefahreneStrecke() >= this.Streckenlaenge) {
           this.autoliste[i].ausgeben();
           return this.autoliste[i];
         }
@@ -156,8 +161,9 @@ public class Rennen {
 
   /**
    * Alle Teilnehmerinnen des Rennens bewegen sich einen Schritt weiter.
+   * 
    */
-  public void schritt() {
+  private void schritt() {
 
     // Wenn kein Auto im Array ist, dann soll das nicht funktionieren. Da
     // das Array immer von vorne aufgefuellt wird, muessen wir nur testen,
