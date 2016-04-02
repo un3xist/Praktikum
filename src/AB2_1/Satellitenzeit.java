@@ -24,19 +24,23 @@
 
 package AB2_1;
 
+/**
+ * Diese Klasse bildet aus den angegebenen Sekunden die Tage, Stunden und Minuten heraus.
+ * @author Manuel Scholz
+ * 
+ */
 public class Satellitenzeit {
 	public static void main(String[] args) {
 		int tage, stunden, minuten, sekunden;
-		
+
 		final int satellitenzeit = 10000;
-		
+
 		final int SEKUNDEN_PRO_MINUTE = 60;
 		final int MINUTEN_PRO_STUNDE = 60;
 		final int STUNDEN_PRO_TAG = 24;
-		
+
 		final int SEKUNDEN_PRO_STUNDE = SEKUNDEN_PRO_MINUTE * MINUTEN_PRO_STUNDE;
 		final int SEKUNDEN_PRO_TAG = SEKUNDEN_PRO_STUNDE * STUNDEN_PRO_TAG;
-		
 
 		// zuerst schauen wir, wie viele Sekunden übrig bleiben
 		sekunden = satellitenzeit % SEKUNDEN_PRO_MINUTE;
