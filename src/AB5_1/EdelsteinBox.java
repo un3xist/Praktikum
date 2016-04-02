@@ -31,9 +31,9 @@ public class EdelsteinBox {
 	 */
 	public EdelsteinBox(Edelstein... edelsteine) {
 		// Jede Edelsteinbox sollte am Anfang leer sein
-		anzahlDiamant = 0;
-		anzahlRubin = 0;
-		anzahlSmaragd = 0;
+		this.anzahlDiamant = 0;
+		this.anzahlRubin = 0;
+		this.anzahlSmaragd = 0;
 
 		// Hier wird sie befuellt. Dabei wird jeder Edelstein durchgegangen und
 		// die Anzahl der einzelnen Edelsteine erhoet.
@@ -41,13 +41,13 @@ public class EdelsteinBox {
 		for (Edelstein stein : edelsteine) {
 			switch (stein) {
 			case DIAMANT:
-				anzahlDiamant++;
+				this.anzahlDiamant++;
 				break;
 			case SMARAGD:
-				anzahlRubin++;
+				this.anzahlRubin++;
 				break;
 			case RUBIN:
-				anzahlSmaragd++;
+				this.anzahlSmaragd++;
 				break;
 			}
 		}
