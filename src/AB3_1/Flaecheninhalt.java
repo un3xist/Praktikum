@@ -22,47 +22,46 @@ package AB3_1;
 
 import java.util.Scanner;
 
+/**
+ * Dieses Programm berechnet den Flaecheninhalt einer Form. Der Nutzer wird nach
+ * der Form und dem Radius gefragt.
+ * 
+ * @author Manuel Scholz
+ *
+ */
 public class Flaecheninhalt {
 
-  public static void main(String[] args) {
-    double radius, flaecheninhalt;
-    int index;
+	public static void main(String[] args) {
+		double radius, flaecheninhalt;
+		int index;
 
-    Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Index eingeben; 1 = Kreis, 2 = Quadrat, 3 = Sechseck");
-    index = scanner.nextInt();
+		System.out.println("Index eingeben; 1 = Kreis, 2 = Quadrat, 3 = Sechseck");
+		index = scanner.nextInt();
 
-    System.out.println("Bitte gebe den Radius/die Seitenlänge ein.");
-    radius = scanner.nextDouble();
+		System.out.println("Bitte gebe den Radius/die Seitenlänge ein.");
+		radius = scanner.nextDouble();
 
-    scanner.close();
+		scanner.close();
 
-     /*switch(index){
-     case 1:
-     flaecheninhalt = radius*radius*Math.PI;
-     break;
-     case 2:
-     flaecheninhalt = radius*radius;
-     break;
-     case 3:
-     flaecheninhalt = (radius*radius*Math.sqrt(3))/4;
-     break;
-     default:
-     flaecheninhalt = -1;
-     break;
-     }*/
+		/*
+		 * switch(index){ case 1: flaecheninhalt = radius*radius*Math.PI; break;
+		 * case 2: flaecheninhalt = radius*radius; break; case 3: flaecheninhalt
+		 * = (radius*radius*Math.sqrt(3))/4; break; default: flaecheninhalt =
+		 * -1; break; }
+		 */
 
-    if (index == 1) {
-      flaecheninhalt = radius * radius * Math.PI;
-    } else if (index == 2) {
-      flaecheninhalt = radius * radius;
-    } else if (index == 3) {
-      flaecheninhalt = (radius * radius * Math.sqrt(3)) / 4;
-    } else {
-      flaecheninhalt = -1;
-    }
+		if (index == 1) {
+			flaecheninhalt = radius * radius * Math.PI;
+		} else if (index == 2) {
+			flaecheninhalt = radius * radius;
+		} else if (index == 3) {
+			flaecheninhalt = (radius * radius * Math.sqrt(3)) / 4;
+		} else {
+			flaecheninhalt = -1;
+		}
 
-    System.out.println("Flaecheninhalt betraegt " + flaecheninhalt + " cm^2");
-  }
+		System.out.println("Flaecheninhalt betraegt " + flaecheninhalt + " cm^2");
+	}
 }

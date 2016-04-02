@@ -20,31 +20,38 @@ package AB2_2;
 
 import java.util.Scanner;
 
+/**
+ * Dieses Programm fragt den Nutzer nach seinem Gewicht und seiner
+ * Koerpergroesse und gibt den BMI des Nutzers aus.
+ * 
+ * @author Manuel Scholz
+ *
+ */
 public class BMI {
 
-  public static void main(String[] args) {
+	public static void main(String[] args) {
 
-    double bmi, gewicht, groesse;
+		double bmi, gewicht, groesse;
 
-    Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
-    // Aufforderung der Eingabe des Gewichts
-    System.out.println("Bitte geben Sie ihr Koerpergewicht in kg an: ");
-    // Scan aus der Kommandozeile
-    gewicht = scanner.nextDouble();
+		// Aufforderung der Eingabe des Gewichts
+		System.out.println("Bitte geben Sie ihr Koerpergewicht in kg an: ");
+		// Scan aus der Kommandozeile
+		gewicht = scanner.nextDouble();
 
-    System.out.println("Bitte geben Sie ihre Koerpergroesse in m an: ");
-    // Scan aus der Kommandozeile
-    groesse = scanner.nextDouble();
+		System.out.println("Bitte geben Sie ihre Koerpergroesse in m an: ");
+		// Scan aus der Kommandozeile
+		groesse = scanner.nextDouble();
 
-    // Berechnung des BMI
-    bmi = gewicht / (groesse * groesse);
+		// Berechnung des BMI
+		bmi = gewicht / (groesse * groesse);
 
-    // Beenden des scanners
-    scanner.close();
+		// Beenden des scanners
+		scanner.close();
 
-    // Ausgabe des BMI
-    System.out.println("Ihr BMI betraegt " + (int) bmi);
-  }
+		// Ausgabe des BMI
+		System.out.println("Ihr BMI betraegt " + (int) bmi);
+	}
 
 }

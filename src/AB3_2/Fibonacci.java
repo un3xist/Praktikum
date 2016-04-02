@@ -30,6 +30,13 @@ package AB3_2;
 
 import java.util.Scanner;
 
+/**
+ * Dieses Programm berechnet die gewuenschte Fibonaccizahl, welche der Nutzer
+ * angeben muss.
+ * 
+ * @author Manuel Scholz
+ *
+ */
 public class Fibonacci {
 
 	public static void main(String[] args) {

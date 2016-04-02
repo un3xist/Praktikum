@@ -18,23 +18,30 @@ package AB2_3;
 
 import java.util.Scanner;
 
+/**
+ * Dieses Programm fragt den Nutzer nach zwei ganzzahlen und wendet dann die
+ * Modulofunktion mittels Operator und mittels Formel aus.
+ * 
+ * @author Manuel Scholz
+ *
+ */
 public class Modulo {
 
-  public static void main(String[] args) {
-    int a, b;
+	public static void main(String[] args) {
+		int a, b;
 
-    Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Bitte geben sie die erste Zahl an: ");
-    a = scanner.nextInt();
+		System.out.println("Bitte geben sie die erste Zahl an: ");
+		a = scanner.nextInt();
 
-    System.out.println("Bitte geben sie die zweite Zahl an: ");
-    b = scanner.nextInt();
+		System.out.println("Bitte geben sie die zweite Zahl an: ");
+		b = scanner.nextInt();
 
-    scanner.close();
-    // Modulo Formel
-    System.out.println("Modulo: " + a % b + " Formel: " + (a - (a / b) * b));
+		scanner.close();
+		// Modulo Formel
+		System.out.println("Modulo: " + a % b + " Formel: " + (a - (a / b) * b));
 
-  }
+	}
 
 }
