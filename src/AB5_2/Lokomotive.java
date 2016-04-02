@@ -19,6 +19,7 @@ public class Lokomotive {
 	public Lokomotive(int laenge, int typ) {
 		this.laenge = laenge;
 		this.typ = typ;
+		ersterWagen = null;
 	}
 
 	/**
