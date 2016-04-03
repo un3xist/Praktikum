@@ -12,9 +12,9 @@ package AB5_2;
  */
 public class Wagen {
 
-	final int laenge;
-	final int passagierKapazitaet;
-	final int Seriennummer;
+	private final int laenge;
+	private final int passagierKapazitaet;
+	private final int Seriennummer;
 	static int wagenZaehler = 1;
 
 	Wagen naechsterWagen;

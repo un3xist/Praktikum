@@ -12,9 +12,9 @@ package AB5_2;
  */
 public class Lokomotive {
 
-	final int laenge;
-	final int typ;
-	Wagen ersterWagen;
+	private final int laenge;
+	private final int typ;
+	private Wagen ersterWagen;
 
 	public Lokomotive(int laenge, int typ) {
 		this.laenge = laenge;
