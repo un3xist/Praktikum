@@ -26,6 +26,9 @@ public class Wagen {
 
 		this.laenge = laenge;
 		this.passagierKapazitaet = passagiere;
+		
+		//naechsten Wagen auf Null setzen, da keiner von anfang an dran ist.
+		naechsterWagen = null;
 	}
 
 	/**
