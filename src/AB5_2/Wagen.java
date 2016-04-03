@@ -16,13 +16,14 @@ public class Wagen {
 	final int passagierKapazitaet;
 	final int Seriennummer;
 	static int wagenZaehler = 1;
-	
+
 	Wagen naechsterWagen;
 
-	public Wagen(int laenge, int passagiere) 
-	{
+	public Wagen(int laenge, int passagiere) {
+		// Seriennummer
 		Seriennummer = wagenZaehler;
 		Wagen.wagenZaehler++;
+
 		this.laenge = laenge;
 		this.passagierKapazitaet = passagiere;
 	}
@@ -43,6 +44,15 @@ public class Wagen {
 	 */
 	public int getPassagierKapazitaet() {
 		return passagierKapazitaet;
+	}
+
+	/**
+	 * Getter
+	 * 
+	 * @return the Seriennummer
+	 */
+	public int getSeriennummer() {
+		return Seriennummer;
 	}
 
 	/**
