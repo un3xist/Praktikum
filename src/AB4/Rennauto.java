@@ -28,11 +28,19 @@ package AB4;
 
 public class Rennauto {
 
-	// Eigenschaften des Objektes Rennauto
 	String fahrername, fahrzeugtyp;
 	double maximalgeschwindigkeit, gefahreneStrecke;
 
-	// Konstruktor
+	/**
+	 * Konstruktor fuer ein neues Rennauto
+	 * 
+	 * @param fahrername
+	 *            Der Fahrer des Rennautos
+	 * @param fahrzeugtyp
+	 *            Der Name des Fahrzeugtyps des Rennautos
+	 * @param maximalgeschwindigkeit
+	 *            Die Maximalgeschwindigkeit des Rennautos
+	 */
 	public Rennauto(String fahrername, String fahrzeugtyp, double maximalgeschwindigkeit) {
 		// Hier werden die Parameter auf die Eigenschaften des Objektes
 		// geschrieben
@@ -61,15 +69,23 @@ public class Rennauto {
 				+ "Maximalgeschwindigkeit: " + this.maximalgeschwindigkeit + "\n" + "Gefahrene Strecke seit start: "
 				+ this.gefahreneStrecke + "\n");
 	}
-	
-	public double getGefahreneStrecke()
-	{
+
+	/**
+	 * Getter fuer die gefahrene Strecke
+	 * 
+	 * @return Die gefahrene Strecke des Autos
+	 */
+	public double getGefahreneStrecke() {
 		return this.gefahreneStrecke;
 	}
-	
-	public String getName()
-  {
-    return this.fahrername;
-  }
+
+	/**
+	 * Getter fuer den Fahrernamen
+	 * 
+	 * @return Fahrername des Autos
+	 */
+	public String getName() {
+		return this.fahrername;
+	}
 
 }
