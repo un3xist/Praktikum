@@ -56,13 +56,13 @@ public class Rennauto {
 	 */
 	public void fahren() {
 		// Die gefahrene Strecke wird um die Maximalgeschwindigkeit mal den
-		// Zufall multipliziert.
-		this.gefahreneStrecke += Math.random() * this.maximalgeschwindigkeit;
+		// einen Zufallsfaktor multipliziert.
+		gefahreneStrecke += Math.random() * maximalgeschwindigkeit;
 	}
 
 	/**
-	 * Beim Aufruf der Funktion wird der aktuelle Zustand des Objektes
-	 * ausgegeben.
+	 * Beim Aufruf der Funktion wird der aktuelle Zustand des Objektes auf der
+	 * Konsole ausgegeben.
 	 */
 	public void ausgeben() {
 		System.out.println("Fahrername: " + this.fahrername + "\n" + "Fahrzeugtyp: " + this.fahrzeugtyp + "\n"
