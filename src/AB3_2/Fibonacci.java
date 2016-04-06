@@ -28,6 +28,7 @@
 
 package AB3_2;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
@@ -52,21 +53,20 @@ public class Fibonacci {
 
 		// Zum berechnen brauchen wir zwei temporäre Variablen, welche die
 		// Fibonaccizaheln beim itterieren beinhalten
-		// long, da ein 32 Bit Integer nur bis zur 47. Fibonaccizahl möglich
-		// ist. long ist ein 64 bit Integer.
-		// Damit erreichen wir die 162. Zahl.
-		long f1 = 1;
-		long f2 = 1;
+		// BigInteger, da ein 32 Bit Integer nur bis zur 47. Fibonaccizahl möglich
+		// ist. BigInteger ist ein beliebig grosser Integer.
+		BigInteger f1 = BigInteger.ONE;
+		BigInteger f2 = BigInteger.ONE;
 		// Nun fangen wir mit der dritten Fibonaccizahl an (Wir kennen ja
 		// bereits die ersten zwei)
 
 		int i = 3;
 		while (i <= fibonaccizahlen) {
-			long temp;
+			BigInteger temp;
 			// Zuerst speichern wir die letzte Fibonaccizahl zwischen
 			temp = f2;
 			// Nun erhoehen wir diese mit der vorrigen
-			f2 = f1 + f2;
+			f2 = f1.add(f2);
 			// und setzen die vorrige auf den zwischengespeicherten Wert.
 			f1 = temp;
 			i++;
@@ -74,7 +74,7 @@ public class Fibonacci {
 
 		// Nun ist f2 die gewünschte Fibonaccizahl
 
-		long gewuenschteFibonacciZahl = f2;
+		BigInteger gewuenschteFibonacciZahl = f2;
 
 		// Berechnung mittels der Formel von Moivre/Binet
 		// fn =(phi^n-psi^n)/(phi-psi)
