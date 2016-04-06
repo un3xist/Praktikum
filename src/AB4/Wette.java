@@ -44,7 +44,7 @@ public class Wette {
    */
   public String getFahrerin()
   {
-    return this.fahrerin;
+    return fahrerin;
   }
   
   /**
@@ -53,7 +53,7 @@ public class Wette {
    */
   public int getWetteinsatz()
   {
-    return this.wettEinsatz;
+    return wettEinsatz;
   }
   
   /**
@@ -62,7 +62,7 @@ public class Wette {
    */
   public String getSpieler()
   {
-    return this.spieler;
+    return spieler;
   }
 
 }
