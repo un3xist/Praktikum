@@ -45,12 +45,20 @@ public class Flaecheninhalt {
 
 		scanner.close();
 
-		/*
-		 * switch(index){ case 1: flaecheninhalt = radius*radius*Math.PI; break;
-		 * case 2: flaecheninhalt = radius*radius; break; case 3: flaecheninhalt
-		 * = (radius*radius*Math.sqrt(3))/4; break; default: flaecheninhalt =
-		 * -1; break; }
-		 */
+		// switch (index) {
+		// case 1:
+		// flaecheninhalt = radius * radius * Math.PI;
+		// break;
+		// case 2:
+		// flaecheninhalt = radius * radius;
+		// break;
+		// case 3:
+		// flaecheninhalt = (radius * radius * Math.sqrt(3)) / 4;
+		// break;
+		// default:
+		// flaecheninhalt = -1;
+		// break;
+		// }
 
 		if (index == 1) {
 			flaecheninhalt = radius * radius * Math.PI;
