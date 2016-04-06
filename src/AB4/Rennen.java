@@ -119,7 +119,7 @@ public class Rennen {
    * hat. Falls dies für kein Rennauto zutrifft, liefert sie null . Falls
    * mehrere Rennautos bereits im Ziel sind, liefert sie ein beliebiges davon.
    * 
-   * @return
+   * @return Das Auto des Siegers des Rennens. Wenn kein Sieger, dann null.
    */
   Rennauto ermittleSieger() {
 
