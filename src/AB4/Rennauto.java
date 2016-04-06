@@ -24,7 +24,7 @@
  * Zustand des Objektes ausgeben.
  */
 
-package AB4_1;
+package AB4;
 
 public class Rennauto {
 
@@ -62,9 +62,14 @@ public class Rennauto {
 				+ this.gefahreneStrecke + "\n");
 	}
 	
-	public double gefahreneStreckeAusgeben()
+	public double getGefahreneStrecke()
 	{
 		return this.gefahreneStrecke;
 	}
+	
+	public String getName()
+  {
+    return this.fahrername;
+  }
 
 }
